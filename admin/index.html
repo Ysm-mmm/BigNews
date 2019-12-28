@@ -84,7 +84,15 @@
 
                 }
             })
-        })
+            //退出登录事件
+            //给点击按钮 logout 添加 onclick 事件
+            $(".logout").on("click", function () {
+                //清除本地缓存
+                localStorage.removeItem("token");
+                //跳转回到登录页面
+                location.href = "./login.html"
+            })
+        });
     </script>
 </body>
 
